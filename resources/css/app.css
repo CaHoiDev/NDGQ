@@ -92,7 +92,7 @@ img {
 }
 
 body {
-  font-family: var(--ff-B);
+  font-family: var(--ff-A);
   color: var(--color-B);
   font-weight: var(--fw-body);
   font-size: var(--fz-body);
@@ -111,6 +111,7 @@ a {
   transform: rotate(-90deg) translateY(-100%);
   text-transform: uppercase;
   font-weight: var(--fw-nav);
+  font-family: var(--ff-B);
 }
 .nav__list {
   display: flex;
