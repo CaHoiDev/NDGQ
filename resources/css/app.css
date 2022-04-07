@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  position: relative;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-A: #282727;
+  --color-B: #1D1D1D;
+  --color-C: white;
+  --color-D: #09636b;
+  --color-E: #FFCA9F;
+  --color-F: #DDDDDD;
+  --color-G: #0f99a4;
+  --ff-A: "Raleway", sans-serif;
+  --ff-B: "MuseoModerno", cursive;
+  --fw-body: 500;
+  --fw-nav: 700;
+  --fz-body: 18px;
+  --right-nav: 40px;
+  --top-nav: 40px;
+  --z-index-A: 1;
+  --z-index-B: calc(var(--z-index-A) + 1);
+  --z-index-C: calc(var(--z-index-B) + 1);
+  --z-index-D: calc(var(--z-index-C) + 1);
+  --z-index-E: calc(var(--z-index-D) + 1);
+  --z-index-F: calc(var(--z-index-E) + 1);
+  --z-index-G: calc(var(--z-index-F) + 1);
+  --z-index-H: calc(var(--z-index-G) + 1);
+  --gap-nav: 30px;
+}
+
+body {
+  font-family: var(--ff-B);
+  color: var(--color-B);
+  font-weight: var(--fw-body);
+  font-size: var(--fz-body);
+}
+
+a {
+  color: var(--color-A);
+}
+
+.nav {
+  position: fixed;
+  right: var(--right-nav);
+  top: var(--top-nav);
+  z-index: var(--z-index-H);
+  transform-origin: right top;
+  transform: rotate(-90deg) translateY(-100%);
+  text-transform: uppercase;
+  font-weight: var(--fw-nav);
+}
+.nav__list {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--gap-nav);
+}
+.nav__item {
+  position: relative;
+}
+.nav__link {
+  display: block;
+  transition: 0.5s;
+}
+.nav__link::after {
+  content: attr(data-text);
+  font-size: 100px;
+  font-weight: 900;
+  color: var(--color-A);
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  transform-origin: bottom right;
+  transform: rotate(90deg) translate(200%, 37.5%) scaleY(0.75);
+  transition: 0.7s;
+}
+.nav__link:hover {
+  color: transparent;
+}
+.nav__link:hover::after {
+  transform: rotate(90deg) translate(0, 37.5%) scaleY(0.75);
+}
+
+.logo {
+  font-size: 60px;
+  font-weight: 900;
+  font-family: var(--ff-A);
+  color: var(--color-A);
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  transform: scaleY(0.8);
+}
+
+#museum {
+  overflow-y: hidden;
+  background-color: var(--color-F);
+}
+#museum::-webkit-scrollbar {
+  display: none;
+}
+#museum .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  height: 100vh;
+  padding: 50px 50px 50px 50px;
+}
+#museum .container .title {
+  position: fixed;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  z-index: var(--z-index-G);
+  display: block;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 130px;
+  font-weight: 900;
+  color: var(--color-G);
+}
+#museum .container .row--primary, #museum .container .row__secondary {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(150px + 13vh);
+  align-items: center;
+  gap: 130px;
+}
+#museum .container .row--primary .art, #museum .container .row__secondary .art {
+  box-shadow: rgba(22, 22, 35, 0.35) 0px 8px 24px, rgba(17, 17, 26, 0.35) 0px 16px 56px, rgba(17, 17, 26, 0.35) 0px 24px 80px;
+  width: 100%;
+}
+#museum .container .row--primary .art__img, #museum .container .row__secondary .art__img {
+  transition: 0.3s;
+}
+#museum .container .row--primary .art:hover .art__img, #museum .container .row__secondary .art:hover .art__img {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=app.css.map */
