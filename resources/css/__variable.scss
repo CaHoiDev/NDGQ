@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-//font-family: 'Playfair Display', serif;
-//font-family: 'Raleway', sans-serif;
+
 :root{
     --color-A: #282727;
     --color-B: #1D1D1D;
@@ -8,7 +7,7 @@
     --color-D: #09636b;
     --color-E: #FFCA9F;
     --color-F: #DDDDDD;
-    --color-G: #0f99a4;
+    --color-G: #0fb4c0;
 
     --ff-A: 'Raleway', sans-serif;
     --ff-B: 'MuseoModerno', cursive;
@@ -17,6 +16,7 @@
     --fw-nav: 700;
 
     --fz-body: 18px;
+    --fz-museum-title: 130px;
 
     --right-nav: 40px;
     --top-nav: 40px;
@@ -31,5 +31,12 @@
     --z-index-H: calc(var(--z-index-G) + 1);
 
     --gap-nav: 30px;
+    --gap-museum-container: 100px;
+
+    --gac-museum-row: calc(150px + 13vh);
+
+
+
+    --padding-museum-container: 50px 50px 50px 50px;
 
 }

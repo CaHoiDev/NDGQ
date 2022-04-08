@@ -7,15 +7,25 @@
     //background-color: #cbd5e0;
 }
 
+//*{
+//    transition: 0.5s;
+//}
+
 a{
     color: var(--color-A);
 }
 
+#index{
+    text-decoration: underline;
+    color: var(--color-D);
+}
+
 .nav{
     position: fixed;
-    right: var(--right-nav);
+    right: 0;
     top: var(--top-nav);
     z-index: var(--z-index-H);
+
 
     transform-origin: right top;
     transform: rotate(-90deg) translateY(-100%);
@@ -37,23 +47,25 @@ a{
     &__link{
         display: block;
 
+        padding: 0 0 40px 0;
+
         transition: 0.5s;
         &::after{
             content: attr(data-text);
             font-size: 100px;
             font-weight: 900;
-            color: var(--color-A);
+            color: var(--color-G);
 
             position: absolute;
             right: 50%;
-            bottom: 0;
+            bottom: 100%;
 
             transform-origin: bottom right;
             transform: rotate(90deg) translate(200%, calc(50% - 50%*0.25)) scaleY(0.75);
             transition: 0.7s;
         }
         &:hover{
-            color: transparent;
+            color: transparent !important;
             &::after{
                 transform: rotate(90deg) translate(0, calc(50% - 50%*0.25)) scaleY(0.75);
             }
@@ -70,7 +82,46 @@ a{
     position: fixed;
     top: 40px;
     left: 40px;
-    z-index: 10;
+    z-index: var(--z-index-H);
 
     transform: scaleY(0.8);
+}
+
+.wrapper{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-index-G);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+
+    background-color: var(--color-C);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    text-transform: uppercase;
+
+    font-size: 25px;
+    font-weight: bolder;
+    //font-family: var(--ff-B);
+    & .img{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    & .img__time{
+        text-align: right;
+        font-size: 14px;
+        text-transform: lowercase;
+    }
+    & img{
+        max-height: 70vh;
+    }
 }
