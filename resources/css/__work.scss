@@ -1,0 +1,109 @@
+#work{
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
+    }
+
+
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        gap: 300px;
+
+        .item:nth-child(odd){
+            padding-right: 70px;
+        }
+        .item:nth-child(even){
+            padding-left: 70px;
+            flex-direction: row-reverse;
+        }
+        .item{
+            display: flex;
+            gap: 15px;
+
+            &__intro{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+            }
+
+            & .btn{
+                padding: 10px 20px;
+                border-radius: 25px;
+
+                background-color: var(--color-A);
+                color: var(--color-C);
+                border: 1px solid var(--color-A);
+
+                transition: 0.3s;
+                &:hover{
+                    transform: scale(0.9);
+                    background-color: var(--color-C);
+                    color: var(--color-A);
+
+                }
+            }
+
+            &__name{
+                font-size: 130px;
+                font-weight: 900;
+                &>div:nth-child(even){
+                    color: transparent;
+                    -webkit-text-stroke: 3px var(--color-A);
+                }
+            }
+
+            &__timeline{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                & .line{
+                    height: 1px;
+                    width: 200px;
+                    background-color: var(--color-A);
+                }
+            }
+
+            &__des{
+                background-color: var(--color-A);
+                color: var(--color-C);
+
+                padding: 20px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                &__title{
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+
+                &__content{
+                    font-size: 16px;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3; /* number of lines to show */
+                    line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            &__img{
+                width: 60%;
+                height: 550px;
+            }
+        }
+    }
+}
